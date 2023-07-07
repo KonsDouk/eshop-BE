@@ -19,34 +19,35 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $order1 = \App\Models\Customer::create([
-            'fName'=> 'Kostas',
-            'lName' => 'Papadopoulos',
-            'phone' => '1234509876',
-            'cellphone'=> '6912345678',
-            'address'=> 'Adamantiou Korai',
-            'streetNo'=> '21',
-            'isActive'=> true,
+        $photo1 = \App\Models\ProductsPhotos::create([
+            'sku'=> 'abc',
+            'name' => 'Shirt',
+            'description' => 'Black Shirt',
+            'price'=> '10',
+            'quantity'=> '100',
         ]);
 
-        $customer2 = \App\Models\Customer::create([
-            'fName'=> 'Giannis',
-            'lName' => 'Petrou',
-            'phone' => '2310 55112',
-            'cellphone'=> '6911223344',
-            'address'=> 'Aristotelous',
-            'streetNo'=> '5',
-            'isActive'=> true,
+        $photo2 = \App\Models\ProductsPhotos::create([
+            'sku'=> 'def',
+            'name' => 'Jeans',
+            'description' => 'A pair of jeans',
+            'price'=> '50',
+            'quantity'=> '15',
         ]);
 
-        $customer3 = \App\Models\Customer::create([
-            'fName'=> 'Christos',
-            'lName' => 'Adamidis',
-            'phone' => '21055642',
-            'cellphone'=> '6999887766',
-            'address'=> 'Agiou Hlia',
-            'streetNo'=> '45A',
-            'isActive'=> false,
+        $photo3 = \App\Models\ProductsPhotos::create([
+            'sku'=> 'ghi',
+            'name' => 'Dress',
+            'description' => 'A Sundress',
+            'price'=> '35',
+            'quantity'=> '205',
+        ]);
+        $photo4 = \App\Models\ProductsPhotos::create([
+            'sku'=> 'jkl',
+            'name' => 'Hat',
+            'description' => 'No Fear hat',
+            'price'=> '12',
+            'quantity'=> '300',
         ]);
     }
 }

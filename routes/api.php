@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/testing', 'App\Http\Controllers\Controller@test');
 Route::get('/customers', 'App\Http\Controllers\CustomersController@customers');
 Route::get('/orders', 'App\Http\Controllers\OrdersController@index');
+Route::get('/products', 'App\Http\Controllers\ProductsController@index');
