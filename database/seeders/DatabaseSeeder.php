@@ -20,34 +20,30 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $photo1 = \App\Models\ProductsPhotos::create([
-            'sku'=> 'abc',
-            'name' => 'Shirt',
-            'description' => 'Black Shirt',
-            'price'=> '10',
-            'quantity'=> '100',
+            'product_id'=> '1',
+            'title' => 'Shirt Photo',
+            'src' => 'images/1_img1.jpg',
+            'alt'=> 'Shirt Photo',
         ]);
 
         $photo2 = \App\Models\ProductsPhotos::create([
-            'sku'=> 'def',
-            'name' => 'Jeans',
-            'description' => 'A pair of jeans',
-            'price'=> '50',
-            'quantity'=> '15',
+            'product_id'=> '2',
+            'title' => 'Jeans Photo',
+            'src' => 'images/1_img2.jpg',
+            'alt'=> 'Jeans Photo',
         ]);
 
         $photo3 = \App\Models\ProductsPhotos::create([
-            'sku'=> 'ghi',
-            'name' => 'Dress',
-            'description' => 'A Sundress',
-            'price'=> '35',
-            'quantity'=> '205',
+            'product_id'=> '3',
+            'title' => 'Dress Photo',
+            'src' => 'images/1_img3.jpg',
+            'alt'=> 'Dress Photo',
         ]);
         $photo4 = \App\Models\ProductsPhotos::create([
-            'sku'=> 'jkl',
-            'name' => 'Hat',
-            'description' => 'No Fear hat',
-            'price'=> '12',
-            'quantity'=> '300',
+            'product_id'=> '4',
+            'title' => 'Hat Photo',
+            'src' => 'images/1_img4.jpg',
+            'alt'=> 'Hat Photo',
         ]);
     }
 }

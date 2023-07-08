@@ -22,3 +22,4 @@ Route::get('/testing', 'App\Http\Controllers\Controller@test');
 Route::get('/customers', 'App\Http\Controllers\CustomersController@customers');
 Route::get('/orders', 'App\Http\Controllers\OrdersController@index');
 Route::get('/products', 'App\Http\Controllers\ProductsController@index');
+Route::get('/products_photos', 'App\Http\Controllers\ProductsPhotosController@index');
