@@ -9,10 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
-    // protected $connection = 'backend';
-    // protected $table = 'customers';
-    // protected $primaryKey = 'customer_id';
-
     use HasFactory;
 
     public function scopeBasicSelect(Builder $q): Builder{

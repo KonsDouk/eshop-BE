@@ -19,31 +19,90 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $photo1 = \App\Models\ProductsPhotos::create([
-            'product_id'=> '1',
-            'title' => 'Shirt Photo',
-            'src' => 'images/1_img1.jpg',
-            'alt'=> 'Shirt Photo',
+        $order1 = \App\Models\Orders::create([
+            'customer_id' => 1,
+            'items' => json_encode(
+                "'Shirt': {
+                    qty: 2,
+                    color: 'Black',
+                    size: 'L'
+                },
+                'Hat': {
+                    qty: 1,
+                    color: 'White',
+                    size: 'M'
+                }"
+            ),
+            'total_price'=> 50,
+            'payment_method'=> 'Credit Card',
+            'state'=> 'Completed',
+            'delivery_address'=> 'Mikinon 5A'
+
         ]);
 
-        $photo2 = \App\Models\ProductsPhotos::create([
-            'product_id'=> '2',
-            'title' => 'Jeans Photo',
-            'src' => 'images/1_img2.jpg',
-            'alt'=> 'Jeans Photo',
+        $order2 = \App\Models\Orders::create([
+            'customer_id' => 2,
+            'items' => json_encode(
+                "'Jeans': {
+                    qty: 1,
+                    color: 'Blue',
+                    size: 'L'
+                }"
+            ),
+            'total_price'=> 40,
+            'payment_method'=> 'Debit Card',
+            'state'=> 'Pending',
+            'delivery_address'=> 'Xarilaou 99'
         ]);
 
-        $photo3 = \App\Models\ProductsPhotos::create([
-            'product_id'=> '3',
-            'title' => 'Dress Photo',
-            'src' => 'images/1_img3.jpg',
-            'alt'=> 'Dress Photo',
+        $order3 = \App\Models\Orders::create([
+            'customer_id' => 3,
+            'items' => json_encode(
+                "'Hat': {
+                    qty: 2,
+                    color: 'Black',
+                    size: 'L'
+                },
+                'Dress': {
+                    qty: 1,
+                    color: 'White',
+                    size: 'M'
+                },
+                'Jeans': {
+                    qty: 1,
+                    color: 'Red',
+                    size: 'S'
+                }"
+            ),
+            'total_price'=> 70,
+            'payment_method'=> 'Αντικαταβολή',
+            'state'=> 'Canceled',
+            'delivery_address'=> 'Agiou Fanouriou 12'
         ]);
-        $photo4 = \App\Models\ProductsPhotos::create([
-            'product_id'=> '4',
-            'title' => 'Hat Photo',
-            'src' => 'images/1_img4.jpg',
-            'alt'=> 'Hat Photo',
+
+        $order4 = \App\Models\Orders::create([
+            'customer_id' => 1,
+            'items' => json_encode(
+                "'Hat': {
+                    qty: 1,
+                    color: 'White',
+                    size: 'L'
+                },
+                'Shirt': {
+                    qty: 1,
+                    color: 'White',
+                    size: 'M'
+                },
+                'Jeans': {
+                    qty: 1,
+                    color: 'Black',
+                    size: 'S'
+                }"
+            ),
+            'total_price'=> 60,
+            'payment_method'=> 'Τραπεζική κατάθεση',
+            'state'=> 'Completed',
+            'delivery_address'=> 'Mikinon 5A'
         ]);
     }
 }
