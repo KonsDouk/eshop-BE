@@ -12,19 +12,19 @@ class Customer extends Model
     use HasFactory;
 
     public function scopeBasicSelect(Builder $q): Builder{
-        $q = $q->select(
-            'id',
-            'fName',
-            'lName',
-            'phone',
-            'cellphone',
-            'address',
-            'streetNo',
-            'isActive',
-            'created_at',
-            'updated_at',
-        );
-        return $q;
+        // $q = $q->select(
+        //     'id',
+        //     'fName',
+        //     'lName',
+        //     'phone',
+        //     'cellphone',
+        //     'address',
+        //     'streetNo',
+        //     'isActive',
+        //     'created_at',
+        //     'updated_at',
+        // );
+        // return $q;
     }
 }
 
