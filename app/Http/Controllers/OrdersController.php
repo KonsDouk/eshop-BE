@@ -12,4 +12,9 @@ class OrdersController extends Controller
 
         return $orders;
     }
+
+    public function userOrder($id){
+        $user_order = Orders::where('customer_id', $id)->first();
+        return $user_order;
+    }
 }

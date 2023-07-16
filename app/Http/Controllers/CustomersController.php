@@ -14,11 +14,8 @@ class CustomersController extends Controller
     }
 
     public function getSelectedCustomer($id){
-        $customer = Customer::where('id', $id)->first();
+        return Customer::where('id', $id)->with('userOrders')->first();
         return $customer;
     }
 
-    public function getUserOrders($id){
-        $customer_orders = Customer::where('id', $id)->with()
-    }
 }
