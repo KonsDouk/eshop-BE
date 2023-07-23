@@ -9,7 +9,6 @@ class ProductsPhotosController extends Controller
 {
     public function index(Request $request) {
         $product_photos = ProductsPhotos::get();
-        
         return $product_photos;
     }
 }
