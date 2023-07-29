@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->get('/customer', function (Request $request) {
+    return $request->customer();
 });
 
 Route::get('/testing', 'App\Http\Controllers\Controller@test');
@@ -29,3 +29,7 @@ Route::get('/orders', 'App\Http\Controllers\OrdersController@index');
 Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 Route::get('/product/{id}', 'App\Http\Controllers\ProductsController@getProduct')->where('id', '[0-9]+');
 Route::get('/products_photos', 'App\Http\Controllers\ProductsPhotosController@index');
+
+//Authentication
+Route::post('/customerAuthentication', 'App\Http\Controllers\CustomerAuthenticationController@authenticateCustomer');
+
