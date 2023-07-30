@@ -29,3 +29,6 @@ Route::get('/orders', 'App\Http\Controllers\OrdersController@index');
 Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 Route::get('/product/{id}', 'App\Http\Controllers\ProductsController@getProduct')->where('id', '[0-9]+');
 Route::get('/products_photos', 'App\Http\Controllers\ProductsPhotosController@index');
+
+//Authentication
+Route::post('/customerLogin', 'App\Http\Controllers\CustomersController@login');
