@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -107,9 +108,14 @@ class AuthController extends Controller
         ]);
         
         if (Auth::attempt($validated)){
-            $request->session()->regenerate();
+            $token = $request->user()->createToken(time());
 
-            dd('Authenticateddddd');
+            return ['token' => $token->plainTextToken];
         }
+    }
+
+    public function logout(Request $request){
+        $request->user()->tokens()->delete();
+        return $request->user();
     }
 }

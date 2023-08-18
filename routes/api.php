@@ -31,4 +31,6 @@ Route::get('/product/{id}', 'App\Http\Controllers\ProductsController@getProduct'
 Route::get('/products_photos', 'App\Http\Controllers\ProductsPhotosController@index');
 
 //Authentication
-Route::post('/customerLogin', 'App\Http\Controllers\CustomersController@login');
+// Route::post('/customerLogin', 'App\Http\Controllers\CustomersController@login');
+Route::post('/login', 'App\Http\Controllers\AuthController@login');
+Route::post('/logout', 'App\Http\Controllers\AuthController@logout')->middleware('auth:sanctum');
