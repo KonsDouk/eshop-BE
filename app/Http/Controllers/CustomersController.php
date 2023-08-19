@@ -19,17 +19,7 @@ class CustomersController extends Controller
         return User::where('id', $id)->with('userOrders')->first();
     }
 
-    public function login(Request $request){
-
-        $validated = $request->validate([
-            'email'=> ['required', 'email'],
-            'password'=> ['required']
-        ]);
-        
-        if (Auth::attempt($validated)){
-            $request->session()->regenerate();
-
-            dd('Authenticateddddd');
-        }
+    public function getCurrentUser(){
+        return Auth::user();
     }
 }

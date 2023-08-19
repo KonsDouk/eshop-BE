@@ -110,7 +110,7 @@ class AuthController extends Controller
         if (Auth::attempt($validated)){
             $token = $request->user()->createToken(time());
 
-            return ['token' => $token->plainTextToken];
+            return ['token' => $token->plainTextToken, 'user'=> Auth::user()];
         }
     }
 

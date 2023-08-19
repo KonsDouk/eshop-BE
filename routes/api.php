@@ -24,6 +24,8 @@ Route::get('/testing', 'App\Http\Controllers\Controller@test');
 Route::get('/customers', 'App\Http\Controllers\CustomersController@customers');
 Route::get('/selectedCustomer/{id}', 'App\Http\Controllers\CustomersController@getSelectedCustomer')->where('id', '[0-9]+');
 Route::get('/orders', 'App\Http\Controllers\OrdersController@index');
+Route::get('/customer', 'App\Http\Controllers\CustomersController@getCurrentUser')->middleware('auth:sanctum');
+
 
 //Products
 Route::get('/products', 'App\Http\Controllers\ProductsController@index');
