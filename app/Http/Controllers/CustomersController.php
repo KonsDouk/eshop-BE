@@ -15,8 +15,10 @@ class CustomersController extends Controller
         return $customers;
     }
 
-    public function getSelectedCustomer($id){
-        return User::where('id', $id)->with('userOrders')->first();
+    public function getSelectedCustomer(/*$id*/){
+        
+        $user_id = Auth::user()->id;
+        return User::where('id', $user_id)->with('userOrders')->first();
     }
 
     public function getCurrentUser(){

@@ -21,8 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/testing', 'App\Http\Controllers\Controller@test');
 
 //Customers
-Route::get('/customers', 'App\Http\Controllers\CustomersController@customers');
-Route::get('/selectedCustomer/{id}', 'App\Http\Controllers\CustomersController@getSelectedCustomer')->where('id', '[0-9]+');
+Route::get('/customers', 'App\Http\Controllers\CustomersController@customers')->middleware('auth:sanctum');
+Route::get('/selectedCustomer', 'App\Http\Controllers\CustomersController@getSelectedCustomer')->middleware('auth:sanctum');
 Route::get('/orders', 'App\Http\Controllers\OrdersController@index');
 Route::get('/customer', 'App\Http\Controllers\CustomersController@getCurrentUser')->middleware('auth:sanctum');
 
