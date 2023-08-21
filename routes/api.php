@@ -36,3 +36,6 @@ Route::get('/products_photos', 'App\Http\Controllers\ProductsPhotosController@in
 // Route::post('/customerLogin', 'App\Http\Controllers\CustomersController@login');
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/logout', 'App\Http\Controllers\AuthController@logout')->middleware('auth:sanctum');
+
+//Wishlists
+Route::get('/wishlists', 'App\Http\Controllers\WishlistsController@getUserWishlists')->middleware('auth:sanctum');
